@@ -17,6 +17,7 @@ namespace Code.Objects {
             Regex regex = new Regex("\\d{1,2}\\."); 
             string[] substrings = regex.Split(apiObj.Definition);
             Definitions = new List<string>(substrings);
+            Definitions = Definitions.Take(5).ToList();
         }
 
         public Word() {
