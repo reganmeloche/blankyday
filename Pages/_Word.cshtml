@@ -1,0 +1,6 @@
+@model Code.Objects.Word
+
+<div class="word-text fw-bold">@Model.WordText</div>
+@foreach (var def in Model.Definitions) {
+    <p>@def</p>
+}

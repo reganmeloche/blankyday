@@ -1,0 +1,90 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+.about-link {
+  color:white;
+  font-size:0.8em;
+}
+
+.about-page {
+  color:white;
+}
+
+.my-break{
+  padding-top:15px;
+}
+
+.my-main {
+  margin-top: 15px;
+}
+
+.my-card-content{
+  overflow-y:auto;
+  height:120px;
+}
+
+.word-text {
+  padding-bottom:5px;
+}
+
+.quote-author{
+  font-style: italic;
+  padding-left: 20px;
+  padding-top:5px;
+}
+
+.riddle-title {
+  font-style: italic;
+  padding-bottom: 5px;
+}
+.riddle-question {
+  padding-bottom: 5px;
+}
+.riddle-answer {
+  color:black;
+  background: black;
+}
+.riddle-answer:hover {
+  background: transparent;
+}
+
+.country-item{
+  padding-bottom:5px;
+}
+
+.exercise-item {
+  padding-bottom:5px;
+}
+
+
+
+.my-photo {
+  width:100%
+}
+
+.my-photo-thumbnail {
+  height:90px;
+}
+
+/* colors */
+
+.color1 > .my-card { background-color: rgb(162, 203, 162); }
+.color2 > .my-card { background-color: rgb(196, 161, 235) ; }
+.color3 > .my-card { background-color: rgb(239, 209, 145); }
+.color4 > .my-card { background-color: rgb(176, 210, 242); }

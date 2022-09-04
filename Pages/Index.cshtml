@@ -1,0 +1,121 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+
+    string word = "Word";
+    ViewData[word] = Model.Word;
+
+    string fact = "Fact";
+    ViewData[fact] = Model.Fact;
+
+    string joke = "Joke";
+    ViewData[joke] = Model.Joke;
+
+    string exercise = "Exercise";
+    ViewData[exercise] = Model.Exercise;
+
+    string photo = "Photo";
+    ViewData[photo] = Model.Photo;
+
+    string calvin = "Calvin";
+    ViewData[calvin] = Model.Calvin;
+
+    string country = "Country";
+    ViewData[country] = Model.Country;
+
+    string riddle = "Riddle";
+    ViewData[riddle] = Model.Riddle;
+
+    string quote = "Quote";
+    ViewData[quote] = Model.Quote;
+
+    string historicalEvent = "History";
+    ViewData[historicalEvent] = Model.HistoricalEvent;
+}
+
+<div>
+
+  <div class="row">
+    <div class="col-sm-4 color2">
+      <partial name="_ObjBox" model="word" /> 
+    </div>
+    <div class="col-sm-4 color4">
+      <partial name="_ObjBox" model="fact"/> 
+    </div>
+    <div class="col-sm-4 color3">
+      <partial name="_ObjBox" model="joke"/> 
+    </div>
+  </div>
+  <div class="my-break"></div>
+
+  <div class="row">
+    <div class="col-sm-4 color1">
+      <partial name="_ObjBox" model="quote"/> 
+    </div>
+    <div class="col-sm-4 color2">
+      <partial name="_ObjBox" model="riddle"/> 
+    </div>
+    <div class="col-sm-4 color3">
+      <partial name="_ObjBox" model="country"/> 
+    </div>
+  </div>
+  <div class="my-break"></div>
+
+  <div class="row">
+    <div class="col-sm-4 color4">
+      <partial name="_ObjBox" model="exercise"/> 
+    </div>
+    
+    <div class="col-sm-4 color3">
+      <partial name="_ObjBox" model="photo"/> 
+    </div>
+
+    <div class="col-sm-4 color1">
+      <partial name="_ObjBox" model="historicalEvent"/> 
+    </div>
+  </div>
+
+  <a asp-area="" asp-page="/About" class="about-link">About</a>
+
+  @* <div class="row">
+    <div class="col-sm-4">
+      <partial name="_ObjBox" model="calvin"/> 
+    </div>
+  </div>
+  <br/> *@
+
+  <!-- Modals -->
+  <!-- Could move these into separate files...-->
+  <div>
+    <!-- Photo Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel">@Model.Photo.Description</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <img src="@Model.Photo.Url" class="my-photo"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calvin Modal -->
+    <div class="modal fade" id="calvinModal" tabindex="-1" aria-labelledby="calvinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="calvinModalLabel">@Model.Calvin.Description</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <img src="@Model.Calvin.ImgUrl" class="my-calvin"/>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+</div>

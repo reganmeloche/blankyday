@@ -1,0 +1,19 @@
+@model Code.Objects.Country
+<div>
+    <div class="country-item">
+        <span class="fw-bold">Country: </span>
+        <span>@Model.Name</span>
+    </div>
+    <div class="country-item">
+        <span class="fw-bold">Capital: </span>
+        <span>@Model.Capital</span>
+    </div>
+    <div class="country-item">
+        <span class="fw-bold">Pop: </span>
+        <span>@String.Format("{0:n0}", Model.Population)</span>
+    </div>
+    <div class="country-item">
+        <span class="fw-bold">Population Density: </span>
+        <span>@Model.PopulationDensity / km<sup>2</sup></span>
+    </div>
+</div>

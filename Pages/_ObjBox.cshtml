@@ -1,0 +1,14 @@
+@model string
+@{
+    string partial_name = $"_{Model}";
+}
+
+<div class="card my-card">
+    <div class="card-body">
+        @* <img class="bg-image" src="~/img/exercise.jpg"/> *@
+        <h6 class="card-title">@Model</h6>
+        <div class="my-card-content">
+            @Html.Partial($"{@partial_name}", ViewData[Model])
+        </div>
+    </div>
+</div>

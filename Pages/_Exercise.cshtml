@@ -1,0 +1,20 @@
+@model Code.Objects.Exercise
+
+
+<div>
+    <div class="exercise-item">
+        <span class="fw-bold">Exercise: </span>
+        <span>@Model.Name (@Model.Difficulty)</span>
+    </div>
+    <div class="exercise-item">
+        <span class="fw-bold">Muscle: </span>
+        <span>@Model.Muscle (@Model.Type)</span>
+    </div>
+    <div class="exercise-item">
+        <span class="fw-bold">Equipment: </span>
+        <span>@Model.Equipment</span>
+    </div>
+    <div>
+        @Model.Instructions
+    </div>
+</div>
